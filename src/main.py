@@ -4,6 +4,21 @@ from fastapi import FastAPI, Query, Path
 
 app = FastAPI()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #  ----------------------------------------------------
 # demo FastAPI functionality tutorial
 #  ---------------------------------------------------
@@ -34,8 +49,6 @@ class Item(BaseModel):
         check_list = [5, 10, 25]
         if value not in check_list:
             raise ValueError(f'Use value from {check_list}')
-
-
 
 
 # handlers
