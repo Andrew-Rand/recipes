@@ -36,3 +36,8 @@ To update migration with alembic use command
 alembic revision --autogenerate -m "First Migration"
 ````
 
+To apply migration in db use command
+
+````
+alembic upgrade head
+````

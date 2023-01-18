@@ -1,7 +1,9 @@
-from sqlalchemy import Column, String
-from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy import Column, String, ForeignKey, Integer
+from sqlalchemy.dialects.postgresql import ARRAY, UUID
+from sqlalchemy.orm import relationship, backref
 
 from src.base.models import BaseModel
+from src.user.models import User
 
 
 class Recipe(BaseModel):
@@ -13,4 +15,6 @@ class Recipe(BaseModel):
     comments = Column(String(1000))
     link = Column(String)
     file_links = Column(ARRAY(item_type=String, as_tuple=False, dimensions=None, zero_indexes=True))
-    # user =
+
+    user_id = Column(UUID, ForeignKey(User.id))
+    user = relationship(User, backref=backref("saved_recipes", lazy="dynamic"))

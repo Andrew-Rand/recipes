@@ -7,7 +7,7 @@ from alembic import context
 from src.utils.db.constants import DB_URL, Base
 from src.utils.db.engine import engine
 from src.recipes.models import Recipe
-# from src.user.models import User
+from src.user.models import User
 
 
 
