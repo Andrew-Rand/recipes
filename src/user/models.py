@@ -12,5 +12,3 @@ class User(BaseModel):
     password = Column(String(200))
     is_active = Column(Boolean, default=True)
     is_admin = Column(Boolean, default=False)
-    successed_tasks = Column(Integer, default=0)
-    streak = Column(Integer, default=0)

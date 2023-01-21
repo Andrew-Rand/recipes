@@ -2,8 +2,12 @@ from typing import List
 
 from fastapi import FastAPI, Query, Path
 
+from src.recipes.api import router as recipes_router
+
 app = FastAPI()
 
+
+app.include_router(router=recipes_router, prefix='/recipes')
 
 
 
