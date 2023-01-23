@@ -4,12 +4,8 @@ from logging.config import fileConfig
 
 from alembic import context
 
-from src.utils.db.constants import DB_URL, Base
-from src.utils.db.engine import engine
-from src.recipes.models import Recipe
-from src.user.models import User
-
-
+from src.base.utils.db.constants import DB_URL, Base
+from src.base.utils.db.engine import engine
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)

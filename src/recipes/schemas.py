@@ -12,3 +12,14 @@ class RecipeSchema(BaseModel):
     link: str = None
     file_links: List[str] = None
     user_id: UUID
+
+
+class RecipeResponseSchema(RecipeSchema):
+
+    class Config:
+        orm_mode = True
+
+
+class RecipeUpdateSchema(RecipeSchema):
+    class Config:
+        fields = {'user_id': {'exclude': True}}

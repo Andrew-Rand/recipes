@@ -1,10 +1,9 @@
-from datetime import datetime
 from uuid import uuid4
 
 from sqlalchemy import Column, DateTime
 from sqlalchemy.dialects.postgresql import UUID
 
-from src.utils.db.constants import Base
+from src.base.utils.db.constants import Base
 
 
 class BaseModel(Base):
